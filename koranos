@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+proot-distro login debian -- bash -lc '
+for s in /usr/local/bin/koranos-pack1.sh /usr/local/bin/koranos-pack2.sh /usr/local/bin/koranos-pack3.sh; do
+  [ -x "$s" ] && bash "$s"
+done
+'

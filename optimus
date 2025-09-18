@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+tmux has-session -t optimus 2>/dev/null || \
+  tmux new-session -d -s optimus "proot-distro login debian -- bash -lc 'koranos; exec bash'"
+tmux attach -t optimus
